@@ -15,8 +15,7 @@
                    library_wingl="game.libretro.fceu-next.dll">
 		<platforms>NES</platforms>
 		<extensions>fds|nes|unif</extensions>
-		<allowvfs>false</allowvfs>
-		<blockextract>false</blockextract>
+		<supports_vfs>false</supports_vfs>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">FCEU-Next v0.98.13mm (SVN)</summary>
