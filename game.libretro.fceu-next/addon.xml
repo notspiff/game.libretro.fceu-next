@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="game.libretro.fceu-next"
 		name="FCEU-Next"
-		version="0.98.15"
+		version="0.98.13"
 		provider-name="Libretro">
 	<requires>
 		<import addon="game.libretro" version="1.0.0"/>
@@ -27,5 +27,6 @@ License: GPLv2
 
 Icon credit: Anarkhya (anarkhya.deviantart.com)</description>
 		<platform>all</platform>
+		<nofanart>true</nofanart>
 	</extension>
 </addon>
