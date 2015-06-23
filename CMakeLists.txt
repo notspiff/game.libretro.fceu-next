@@ -31,7 +31,7 @@ endif()
 include(ExternalProject)
 externalproject_add(fceu-next
                     GIT_REPOSITORY https://github.com/libretro/fceu-next
-                    GIT_TAG 66eb5fb
+                    GIT_TAG 1b3d4d7
                     PREFIX fceu-next
                     PATCH_COMMAND patch -p1 < ${PROJECT_SOURCE_DIR}/00_rename_file.patch
                     CONFIGURE_COMMAND ""
