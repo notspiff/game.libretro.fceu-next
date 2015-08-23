@@ -40,7 +40,9 @@ externalproject_add(fceu-next
                     BUILD_IN_SOURCE 1)
 
 #install the generated shared library
-install(FILES ${PROJECT_SOURCE_DIR}/libretro-fceux${CMAKE_SHARED_LIBRARY_SUFFIX} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+install(FILES ${PROJECT_SOURCE_DIR}/libretro${CMAKE_SHARED_LIBRARY_SUFFIX}
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+        RENAME libretro-fceu-next${CMAKE_SHARED_LIBRARY_SUFFIX})
 
 # write the fceu-next-config.cmake script
-file(WRITE ${CMAKE_INSTALL_PREFIX}/fceu-next-config.cmake "set(FCEU_NEXT_LIB ${CMAKE_INSTALL_PREFIX}/lib/libretro-fceux${CMAKE_SHARED_LIBRARY_SUFFIX})")
+file(WRITE ${CMAKE_INSTALL_PREFIX}/fceu-next-config.cmake "set(FCEU_NEXT_LIB ${CMAKE_INSTALL_PREFIX}/lib/libretro-fceu-next${CMAKE_SHARED_LIBRARY_SUFFIX})")
