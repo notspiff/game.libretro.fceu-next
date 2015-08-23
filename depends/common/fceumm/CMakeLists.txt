@@ -1,4 +1,4 @@
-project(fceu-next)
+project(fceumm)
 
 cmake_minimum_required(VERSION 2.6)
 
@@ -31,9 +31,9 @@ else()
   message(FATAL_ERROR "${PROJECT_NAME} - Unknown system: ${CORE_SYSTEM_NAME}")
 endif()
 
-externalproject_add(fceu-next
+externalproject_add(fceumm
                     SOURCE_DIR ${PROJECT_SOURCE_DIR}
-                    PREFIX fceu-next
+                    PREFIX fceumm
                     CONFIGURE_COMMAND ""
                     INSTALL_COMMAND ""
                     BUILD_COMMAND ${BUILD_COMMAND}
@@ -42,7 +42,7 @@ externalproject_add(fceu-next
 #install the generated shared library
 install(FILES ${PROJECT_SOURCE_DIR}/libretro${CMAKE_SHARED_LIBRARY_SUFFIX}
         DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
-        RENAME libretro-fceu-next${CMAKE_SHARED_LIBRARY_SUFFIX})
+        RENAME libretro-fceumm${CMAKE_SHARED_LIBRARY_SUFFIX})
 
-# write the fceu-next-config.cmake script
-file(WRITE ${CMAKE_INSTALL_PREFIX}/fceu-next-config.cmake "set(FCEU_NEXT_LIB ${CMAKE_INSTALL_PREFIX}/lib/libretro-fceu-next${CMAKE_SHARED_LIBRARY_SUFFIX})")
+# write the fceumm-config.cmake script
+file(WRITE ${CMAKE_INSTALL_PREFIX}/fceumm-config.cmake "set(FCEUMM_LIB ${CMAKE_INSTALL_PREFIX}/lib/libretro-fceumm${CMAKE_SHARED_LIBRARY_SUFFIX})")

@@ -1,4 +1,4 @@
-project(game.libretro.fceu-next)
+project(game.libretro.fceumm)
 
 cmake_minimum_required(VERSION 2.6)
 
@@ -7,10 +7,10 @@ list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 enable_language(CXX)
 
 find_package(kodi REQUIRED)
-find_package(fceu-next REQUIRED)
+find_package(fceumm REQUIRED)
 
-set(DEPLIBS fceu-next)
-set(FCEU_NEXT_CUSTOM_BINARY ${FCEU_NEXT_LIB}
-                           game.libretro.fceu-next${CMAKE_SHARED_LIBRARY_SUFFIX} fceu-next)
+set(DEPLIBS fceumm)
+set(FCEUMM_CUSTOM_BINARY ${FCEUMM_LIB}
+                         game.libretro.fceumm${CMAKE_SHARED_LIBRARY_SUFFIX} fceumm)
 
-build_addon(game.libretro.fceu-next FCEU_NEXT DEPLIBS)
+build_addon(game.libretro.fceumm FCEUMM DEPLIBS)
