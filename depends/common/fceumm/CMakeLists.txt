@@ -40,9 +40,8 @@ externalproject_add(fceumm
                     BUILD_IN_SOURCE 1)
 
 #install the generated shared library
-install(FILES ${PROJECT_SOURCE_DIR}/libretro${CMAKE_SHARED_LIBRARY_SUFFIX}
-        DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
-        RENAME libretro-fceumm${CMAKE_SHARED_LIBRARY_SUFFIX})
+install(FILES ${PROJECT_SOURCE_DIR}/fceumm_libretro${CMAKE_SHARED_LIBRARY_SUFFIX}
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 
 # write the fceumm-config.cmake script
-file(WRITE ${CMAKE_INSTALL_PREFIX}/fceumm-config.cmake "set(FCEUMM_LIB ${CMAKE_INSTALL_PREFIX}/lib/libretro-fceumm${CMAKE_SHARED_LIBRARY_SUFFIX})")
+file(WRITE ${CMAKE_INSTALL_PREFIX}/fceumm-config.cmake "set(FCEUMM_LIB ${CMAKE_INSTALL_PREFIX}/lib/fceumm_libretro${CMAKE_SHARED_LIBRARY_SUFFIX})")
