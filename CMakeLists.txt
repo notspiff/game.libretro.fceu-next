@@ -7,7 +7,7 @@ list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 enable_language(CXX)
 
 find_package(kodi REQUIRED)
-find_package(fceumm REQUIRED)
+find_package(libretro-fceumm REQUIRED)
 
 set(DEPLIBS fceumm)
 set(FCEUMM_CUSTOM_BINARY ${FCEUMM_LIB}
