@@ -8,11 +8,7 @@
 		<import addon="game.controller.nes" version="1.0.0"/>
 	</requires>
 	<extension point="kodi.gameclient"
-                   library_android="libgame.libretro.fceumm.so"
-                   library_linux="game.libretro.fceumm.so"
-                   library_osx="game.libretro.fceumm.dylib"
-                   library_windx="game.libretro.fceumm.dll"
-                   library_wingl="game.libretro.fceumm.dll">
+                   library_@PLATFORM@="@LIBRARY_FILENAME@">
 		<platforms>NES</platforms>
 		<extensions>fds|nes|unif</extensions>
 		<supports_vfs>false</supports_vfs>
@@ -26,7 +22,7 @@ Supported files: .fds, .nes, .unif
 License: GPLv2
 
 Icon credit: Anarkhya (anarkhya.deviantart.com)</description>
-		<platform>all</platform>
+		<platform>@PLATFORM@</platform>
 		<nofanart>true</nofanart>
 	</extension>
 </addon>
