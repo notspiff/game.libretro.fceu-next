@@ -1,16 +1,13 @@
+cmake_minimum_required(VERSION 3.1)
 project(game.libretro.fceumm)
 
-cmake_minimum_required(VERSION 2.6)
-
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
-
-enable_language(CXX)
 
 find_package(Kodi REQUIRED)
 find_package(libretro-fceumm REQUIRED)
 
 set(DEPLIBS fceumm)
 set(FCEUMM_CUSTOM_BINARY ${FCEUMM_LIB}
-                         game.libretro.fceumm${CMAKE_SHARED_LIBRARY_SUFFIX} fceumm)
+                         ${PROJECT_NAME}${CMAKE_SHARED_LIBRARY_SUFFIX})
 
-build_addon(game.libretro.fceumm FCEUMM DEPLIBS)
+build_addon(${PROJECT_NAME} FCEUMM DEPLIBS)
