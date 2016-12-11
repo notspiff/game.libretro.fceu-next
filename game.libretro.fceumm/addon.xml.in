@@ -17,12 +17,10 @@
 		<supports_mouse>false</supports_mouse>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">NES / Famicom (FCEUmm) (SVN)</summary>
+		<summary lang="en">NES / Famicom (FCEUmm) git 309c8db</summary>
 		<description>Port of FCEUmm to Libretro. FCEUmm emulates NES, Famicom, and Famicom Disk System (FDS). FCEUmm merges elements from FCEU Ultra, FCEU rerecording, FCEUXD, FCEUXDSP, FCEUXDSP CE, and FCEU-mm into a single branch of FCEU.
 
 Supported files: .fds, .nes, .unf, .unif
-
-License: GPLv2
 
 Icon credit: Anarkhya (anarkhya.deviantart.com)</description>
 		<license>GPLv2</license>
