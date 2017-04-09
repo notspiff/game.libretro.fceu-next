@@ -39,3 +39,15 @@ msgstr ""
 msgctxt "#30005"
 msgid "Color Palette"
 msgstr ""
+
+msgctxt "#30006"
+msgid "Region Override"
+msgstr ""
+
+msgctxt "#30007"
+msgid "Turbo Delay (in frames)"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Turbo Enable"
+msgstr ""
